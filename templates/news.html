@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% block title %} Noticias {{ titulo }} {% endblock %}
+{% block title %} {{ titulo }} {% endblock %}
 {% block bodycontent %}
 	<div id="content">
+		<h2 class="title">{{ titulo }}</h2>
 		{% for item in noticias[:5] %}
 	    	<div class="post_box horizon_divider">
 	    		{% autoescape off %}
@@ -16,7 +17,7 @@
 		{% endfor %}
 	</div> <!-- end of content -->
 	<div id="sidebar">
-		<h2>Noticias Recentes</h2>
+		<h2> Noticias Recentes</h2>
 	    {% for item in noticias[5:10] %}
 		    <div class="news_box">
 				<div class="date">{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}</div>

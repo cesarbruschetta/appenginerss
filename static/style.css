@@ -203,6 +203,9 @@ em { color: #CCCC66; }
 	float: left;
 	width: 560px;
 }
+#content h2.title{
+ color: #FFFF33;   
+}
 
 #sidebar {
 	float: right;
