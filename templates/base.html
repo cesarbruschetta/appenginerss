@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title> Global Feeds | {% block title %}{% endblock %}</title>
+		<meta name="keywords" content="global, news, css templates, website templates, CSS, HTML, gae, google, app engine" />
+		<meta name="description" content="Global Feeds Page - Seus site de Rss da internet" />
+		<link href="/static/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body> 
+		<div id="wrapper">
+			<div id="header">
+		        <div id="menu">
+ 					{% include "menu.html" %}
+		        </div> <!-- end of menu -->
+		        <div id="site_title">
+		            <h1><a href="/">Global <strong>Feeds</strong>
+		            	<span>Seus site de Rss da internet</span></a>
+		            </h1>
+		        </div> <!-- end of site_title -->
+		    </div> <!-- end of header -->
+		    <div id="main">
+		    	{% block bodycontent %}
+					Replace this Contents
+				{% endblock %}
+		        <div class="cleaner"></div>
+		    </div> <!-- end of main -->
+			<div id="footer">
+		    	<p>R. Coimbra, 567 - Vila Pires | Santo Andre - SP | Telefones  (11) 4453-5295 |	Celular  (11) 9163-1305</p>
+		    </div> <!-- end of footer -->
+		</div>  <!-- end of wrapper -->
+		<p id="sobre">Copyright &copy; 2012 <a href="/static/sobre.html" target="popupwindow" onclick='window.open("/static/sobre.html", "popupwindow", "scrollbars=yes,width=590,height=360");return true'>Cesar Augusto</a> - Todos os direitos reservados</p>
+		<!-- end #footer -->
+		<!--
+		{% include "analytics.html" %}
+		-->
+	</body>
+</html>

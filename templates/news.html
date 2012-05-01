@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} Noticias {{ titulo }} {% endblock %}
+{% block bodycontent %}
+	<div id="content">
+		{% for item in noticias[:5] %}
+	    	<div class="post_box horizon_divider">
+	    		{% autoescape off %}
+	    			<h2>{{ item.title }}</h2>
+	    		{% endautoescape %}
+	        	<div class="post_info">{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}</div>
+		        {% autoescape off %}
+    				<p>{{ item.summary }}</p>
+				{% endautoescape %}
+	    	    <a href="{{ item.url }}" target="_blank">Continue lendo...</a>
+	       	</div>
+		{% endfor %}
+	</div> <!-- end of content -->
+	<div id="sidebar">
+		<h2>Noticias Recentes</h2>
+	    {% for item in noticias[5:10] %}
+		    <div class="news_box">
+				<div class="date">{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}</div>
+		        <p><a href="{{ item.url }}" target="_blank">
+		        	{% autoescape off %}
+		        		{{ item.title }}
+		        	{% endautoescape %}
+		        </a></p>
+		        {% autoescape off %}
+    				<p>{{ item.summary }}</p>
+				{% endautoescape %}
+		    </div>
+	    {% endfor %}
+	  	<div class="cleaner_h40"></div>
+	</div>
+{% endblock %}
