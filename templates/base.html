@@ -6,6 +6,17 @@
 		<meta name="keywords" content="global, news, css templates, website templates, CSS, HTML, gae, google, app engine" />
 		<meta name="description" content="Global Feeds Page - Seus site de Rss da internet" />
 		<link href="/static/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+			$j = jQuery.noConflict();
+ 			$j(document).ready(function () {    
+				var url = window.location.pathname;
+				url = url.substr(url.indexOf("/"));
+				$j("#mainMenu").find("a[href='" + url + "']").addClass("current");
+			});
+
+		</script>
+		
 	</head>
 	<body> 
 		<div id="wrapper">
@@ -31,8 +42,8 @@
 		</div>  <!-- end of wrapper -->
 		<p id="sobre">Copyright &copy; 2012 <a href="/static/sobre.html" target="popupwindow" onclick='window.open("/static/sobre.html", "popupwindow", "scrollbars=yes,width=590,height=360");return true'>Cesar Augusto</a> - Todos os direitos reservados</p>
 		<!-- end #footer -->
-		<!--
+		<!-- Google Analytics -->
 		{% include "analytics.html" %}
-		-->
+		
 	</body>
 </html>
