@@ -6,7 +6,11 @@
     		<h2 class="title">{{ news.titulo }}</h2>
     		{% for item in news.noticias[:5] %}
 			    <div class="news_box">
-					<div class="date">{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}</div>
+					<div class="date">
+						{% if item.updated %}
+							{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}
+						{% endif %}
+					</div>
 			        <p><a href="{{ item.url }}" target="_blank">
 			        	{% autoescape off %}
 			        		{{ item.title }}
@@ -16,6 +20,7 @@
 	    				<p>{{ item.summary }}</p>
 					{% endautoescape %}
 			    </div>
+			    <div class="cleaner-both"></div>
 		    {% endfor %}            
         </div>
   		<div class="three_column margin_r35 vertical_divider">
@@ -23,7 +28,11 @@
     		<h2 class="title">{{ news.titulo }}</h2>
     		{% for item in news.noticias[:5] %}
 			    <div class="news_box">
-					<div class="date">{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}</div>
+					<div class="date">
+						{% if item.updated %}
+							{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}
+						{% endif %}
+					</div>
 			        <p><a href="{{ item.url }}" target="_blank">
 			        	{% autoescape off %}
 			        		{{ item.title }}
@@ -33,6 +42,7 @@
 	    				<p>{{ item.summary }}</p>
 					{% endautoescape %}
 			    </div>
+			    <div class="cleaner-both"></div>
 		    {% endfor %}
 
         </div>
@@ -41,7 +51,11 @@
     		<h2 class="title">{{ news.titulo }}</h2>
     		{% for item in news.noticias[:5] %}
 			    <div class="news_box">
-					<div class="date">{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}</div>
+					<div class="date">
+						{% if item.updated %}
+							{{ item.updated.strftime('%d/%m/%Y - %H:%M') }}
+						{% endif %}
+					</div>
 			        <p><a href="{{ item.url }}" target="_blank">
 			        	{% autoescape off %}
 			        		{{ item.title }}
@@ -51,6 +65,7 @@
 	    				<p>{{ item.summary }}</p>
 					{% endautoescape %}
 			    </div>
+			    <div class="cleaner-both"></div>
 		    {% endfor %}
         	
         </div>
