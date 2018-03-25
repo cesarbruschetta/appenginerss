@@ -37,7 +37,7 @@ debug = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 # Instantiate the application.
 app = App(rules=rules, config=config, debug=debug)
 enable_appstats(app)
-enable_jinja2_debugging()
+# enable_jinja2_debugging()
 
 def main():
     app.run()
