@@ -19,7 +19,7 @@ a:hover {
 	text-decoration: none;
 }
 
-p { margin: 0px; padding: 0 0 10px 0; float: left; }
+p { margin: 0px; padding: 0 0 10px 0;}
 img { border: none; padding: 5px;}
 
 h1 { font-size: 40px; font-weight: bold; margin: 0 0 30px 0; padding: 5px 0; color: #fff; }
@@ -229,9 +229,14 @@ em { color: #CCCC66; }
 
 .news_box {
 	margin-bottom: 20px;
+	float: left;
+    width: 250px;
 }
 .news_box .date {
 	color: #FF9900;
+}
+.news_box img {
+	width: 250px;
 }
 
 .services_section {
